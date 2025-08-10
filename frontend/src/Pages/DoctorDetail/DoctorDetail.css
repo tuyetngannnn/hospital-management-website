@@ -1,0 +1,113 @@
+@import "../../App.css";
+.doctor-detail-page {
+  background-color: #ffff;
+  text-align: center;
+}
+/* Card chính */
+.doctor-card {
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 50px;
+}
+
+/* Chia ảnh và thông tin thành 2 phần */
+.doctor-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Ảnh bên trái */
+.doctor-avatar {
+  flex: 1; /* Chỉnh flex: 1 để phần avatar có kích thước bằng với phần thông tin */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+  max-width: 600px;
+  max-height: 600px;
+}
+
+.doctor-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Thông tin bên phải */
+.doctor-info {
+  flex: 1; /* Chỉnh flex: 1 để phần thông tin chiếm không gian bằng avatar */
+  text-align: left;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-self: center;
+}
+
+.doctor-info h1 {
+  font-weight: bold;
+  color: var(--darkblue);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.doctor-info p {
+  margin: 10px 0;
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--blue);
+}
+
+.doctor-info strong {
+  color: var(--darkblue);
+  font-weight: bold;
+  text-align: justify; /* Căn đều chữ trong thẻ strong */
+}
+.btn-booking-doctor {
+  width: 250px;
+  height: 50px;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 6px;
+  align-self: flex-end;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--darkblue);
+  }
+}
+.btn-booking-doctor h2 {
+  color: white;
+}
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+  .doctor-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .doctor-avatar {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .doctor-info {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctor-avatar {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .doctor-info p {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,353 @@
+@import '../../App.css';
+
+/* Đặt bố cục 2 cột với flexbox */
+.admin-layout {
+    display: flex;
+    height: calc(100vh - 40px);
+    /* Chiều cao 100% màn hình */
+    flex-direction: column;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.service-manager-content {
+    /* flex-grow: 1;
+  padding: 20px;
+  border: solid 1.5px #EFD099;
+  background-color: #f5f8fc;
+  border-radius: 20px;
+  margin-left: 250px;
+  overflow-y: auto;
+  display: flex; */
+
+    margin-left: 250px;
+    height: 100vh;
+    /* Đặt chiều cao cố định cho ô màu trắng */
+    border-radius: 20px;
+    padding: 20px;
+    flex: 1;
+    border: 2px solid var(--darkblue);
+    background-color: #fff;
+    overflow-y: auto;
+    /* Chỉ cho phép cuộn dọc */
+    overflow-x: hidden;
+    /* Ẩn cuộn ngang nếu có */
+
+    /* Tùy chỉnh thanh cuộn trên Firefox */
+    scrollbar-width: thin;
+    /* Độ rộng mỏng */
+    scrollbar-color: var(--darkblue) #f1f1f1;
+    /* Màu thanh cuộn (nút và nền) */
+}
+
+/* Tùy chỉnh thanh cuộn trên Webkit (Chrome, Edge, Safari) */
+.service-manager-content::-webkit-scrollbar {
+    width: 4px;
+    /* Độ rộng thanh cuộn */
+}
+
+.service-manager-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Nền của thanh cuộn */
+    border-radius: 4px;
+    /* Bo góc */
+}
+
+.service-manager-content::-webkit-scrollbar-thumb {
+    background-color: var(--darkblue);
+    /* Màu nút kéo */
+    border-radius: 4px;
+    /* Bo góc */
+    border: 2px solid #f1f1f1;
+    /* Tạo khoảng cách với track */
+}
+
+.service-manager-content::-webkit-scrollbar-thumb:hover {
+    background-color: var(--darkblue);
+    /* Màu nút khi hover */
+}
+
+.page-services h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin: 20px 0 30px 0;
+    color: var(--darkblue);
+    text-align: center;
+    position: sticky;
+    top: 20px;
+    /* Đảm bảo h1 luôn ở vị trí cố định khi cuộn */  
+    background-color: #fff;
+    /* Đảm bảo h1 không bị che khuất */
+}
+
+.add-type-service {
+    text-align: right;
+    /* Aligns the button to the right */
+    margin-bottom: 20px;
+    /* Adds some space between the button and the table */
+}
+
+.btn-add-type-service {
+    background-color: var(--darkblue);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.btn-add-type-service:hover {
+    background-color: var(--blue);
+}
+
+
+.plus-icon {
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.service-category-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+
+.service-category-table thead {
+    position: sticky;
+}
+
+.service-category-table th {
+    background-color: var(--darkblue);
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    white-space: nowrap;
+    width: auto;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    /* Đặt thead cố định trên cùng khi cuộn */
+    z-index: 1;
+    /* Đảm bảo thead nằm trên bảng */
+}
+
+/* Thêm chiều cao cố định cho phần bảng và cuộn */
+.service-category-table-wrapper {
+    height: 520px;
+    /* Đặt chiều cao cố định cho phần bảng */
+    overflow-y: auto;
+    /* Cuộn dọc */
+}
+
+/* Tùy chỉnh thanh cuộn trên Webkit (Chrome, Edge, Safari) */
+.service-category-table-wrapper::-webkit-scrollbar {
+    width: 8px;
+    /* Độ rộng thanh cuộn, thay đổi từ 4px thành 8px */
+}
+
+/* Tùy chỉnh thanh cuộn trong suốt khi không cuộn */
+.service-category-table-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+/* Tùy chỉnh nút cuộn */
+.service-category-table-wrapper::-webkit-scrollbar-thumb {
+    background-color: var(--darkblue);
+    border-radius: 4px;
+    border: 2px solid #f1f1f1;
+}
+
+/* Thay đổi màu khi hover */
+.service-category-table-wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue);
+}
+
+/* Tùy chỉnh thanh cuộn trên Firefox */
+.service-category-table-wrapper {
+    scrollbar-width: thin;
+    /* Độ rộng thanh cuộn */
+    scrollbar-color: var(--darkblue) #f1f1f1;
+    /* Màu sắc của nút và nền */
+}
+
+
+.service-category-table th,
+.service-category-table td {
+    padding: 10px;
+    font-size: 16px;
+    color: var(--darkblue);
+    text-align: start;
+    border-bottom: 1px solid var(--darkblue);
+}
+
+
+.service-category-table td button .icon-edit-delete {
+    color: var(--darkblue);
+    font-size: 24px;
+    margin: 10px;
+}
+
+.service-category-table td button:hover .icon-edit-delete {
+    color: var(--blue);
+}
+
+
+
+.service-category-table th {
+    background-color: var(--darkblue);
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    white-space: nowrap;
+    width: auto;
+    height: 50px;
+}
+
+/* Specific to the first and last header cells */
+.service-category-table th:first-child {
+    border-top-left-radius: 8px;
+    /* Top-left corner rounding */
+}
+
+.service-category-table th:last-child {
+    border-top-right-radius: 8px;
+    /* Top-right corner rounding */
+}
+
+.icon-buttons-edit-delete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+.modal-overlay-type {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content-type {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px 40px;
+    width: 600px;
+    max-width: 90%;
+    border: 3px solid #274c77;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+    margin: auto;
+    max-height: 100vh;
+    /* Giới hạn chiều cao của modal */
+    overflow-y: auto;
+    /* Cho phép cuộn dọc khi nội dung vượt quá chiều cao */
+
+    /* Tùy chỉnh thanh cuộn trên Firefox */
+    scrollbar-width: thin;
+    /* Độ rộng mỏng */
+    scrollbar-color: #274c77 #f1f1f1;
+    /* Màu thanh cuộn (nút và nền) */
+}
+
+/* Tùy chỉnh thanh cuộn */
+.modal-content-type::-webkit-scrollbar {
+    width: 8px;
+    /* Độ rộng của thanh cuộn */
+}
+
+
+.modal-content-type::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Màu nền của đường đi thanh cuộn */
+    border-radius: 4px;
+    /* Bo góc cho đường đi */
+}
+
+
+.modal-content-type::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    /* Màu của thanh cuộn */
+    border-radius: 4px;
+    /* Bo góc cho thanh cuộn */
+    border: 2px solid #f1f1f1;
+    /* Khoảng cách giữa thanh cuộn và đường đi */
+}
+
+
+.modal-content-type::-webkit-scrollbar-thumb:hover {
+    background-color: #a8a8a8;
+    /* Màu của thanh cuộn khi hover */
+}
+
+.modal-title-type {
+    text-align: center;
+    font-size: 30px;
+    color: #274c77;
+    margin-top: 15px;
+    margin-bottom: 10px !important;
+}
+
+.label-text-type {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    color: #274c77;
+    margin-bottom: 10px !important;
+}
+
+.modal-input-type {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px !important;
+    border: 2px solid #274c77;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Lato';
+    color: #274c77;
+    box-sizing: border-box;
+}
+
+.modal-submit-button-type {
+    background-color: #274c77;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.modal-submit-button-type:hover {
+    background-color: #5790ab;
+}
+
+.close-icon-type {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #b3b3b3;
+    background: none;
+    border: none;
+}
+
+.close-icon-type:hover {
+    color :#274c77;
+}

@@ -1,0 +1,125 @@
+.detail-follow-up{
+    margin-left: 535px;;
+}
+
+.nd-detail-follow-up{
+    width: 650px;
+    border-radius: 10px;
+    border: 2px solid var(--blue);
+    padding: 20px;
+}
+
+.nd-detail-follow-up h1 {
+text-align: center;
+font-size: 30px;
+color: var(--blue);
+margin-bottom: 20px;
+}
+
+.muc-detail-follow-up {
+display: flex;
+flex-direction: column;
+margin-bottom: 15px;
+}
+
+.muc-detail-follow-up  label {
+font-size: 18px;
+color: var(--darkblue);
+margin-bottom: 5px;
+font-weight: 500;
+}
+
+.value-detail-follow-up  {
+font-size: 16px;
+color: var(--darkblue);
+padding: 13px;
+border: 1px solid var(--blue);
+border-radius: 5px;
+background-color: white;
+}
+
+/* .gop-muc-follow-up  {
+display: flex;
+justify-content: space-between;
+gap: 10px;
+}
+
+.gop-muc-follow-up  .muc-detail-follow-up  {
+flex: 1;
+} */
+
+
+
+/* Tổng thể bảng */
+.detail-service-folow {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+    margin-bottom: 35px;
+  }
+  
+  /* Tiêu đề của bảng */
+  .detail-service-folow th {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 1px solid var(--darkblue);
+    color: var(--blue);
+    font-size: 16px;
+  }
+  
+  /* Dòng dữ liệu */
+  .detail-service-folow td {
+    padding: 10px;
+    font-size: 16px;
+    color: var(--darkblue);
+  }
+  
+  /* Đường kẻ dưới mỗi dòng */
+  .detail-service-folow tr {
+    border-bottom: 1px solid #e3e3e3;
+  }
+  
+  /* Bỏ đường kẻ cho dòng cuối */
+  .detail-service-folow tr:last-child {
+    border-bottom: none;
+  }
+  
+  /* Căn chỉnh cho nội dung */
+  .detail-service-folow td:nth-child(1),
+  .detail-service-folow td:nth-child(2) {
+    text-align: center;
+  }
+  
+  .detail-service-folow td:nth-child(3) {
+    text-align: center;
+    white-space: nowrap;
+  }
+  .thy{
+    font-size: 18px;
+    color: var(--darkblue);
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+
+/* Nút "Save Record" */
+.btn-save-folow {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .btn-save-folow button {
+    width: 100%;
+    height: 51.6px;
+    padding: 10px 20px;
+    background-color: var(--blue);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .btn-save-folow button:hover {
+    background-color: var(--darkblue);
+  }

@@ -1,0 +1,442 @@
+@import "../../App.css";
+
+.body-container {
+    display: flex;
+    height: 100vh;
+    margin-left: 250px;
+    overflow: hidden;
+    /* Ngăn cuộn toàn bộ trang */
+}
+
+.page {
+    margin: 0 !important;
+}
+
+.body-content {
+    flex: 1;
+    background-color: #f5f8fc;
+    overflow: hidden;
+    /* Ngăn cuộn trong phần nội dung */
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dashboard .banner:first-child {
+    height: 30vh;
+    display: flex;
+    gap: 20px;
+}
+
+.dashboard .banner:first-child .firstBox {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background: #7096D1;
+}
+
+.dashboard .banner:first-child .firstBox img {
+    height: 100%;
+    flex: 1;
+}
+
+.dashboard .banner:first-child .firstBox .content {
+    display: flex;
+}
+
+.dashboard .banner:first-child .firstBox .content div {
+    display: flex-colum;
+    align-items: center;
+    font-size: 34px;
+}
+
+.dashboard .banner:first-child .firstBox .content div p {
+    margin-right: 40px;
+    font-size: 25px;
+    color: white;
+}
+
+.dashboard .banner:first-child .firstBox .content div h5 {
+    color: white;
+    margin: 10px 0;
+}
+
+.dashboard .banner:first-child .firstBox .content p {
+    font-size: 16px;
+}
+
+.dashboard .banner:first-child .secondBox {
+    background: #89c2d9;
+    color: #fff;
+}
+
+.dashboard .banner:first-child .thirdBox {
+    color: white;
+    background-color: #adcbe3;
+}
+
+.dashboard .banner:first-child .secondBox,
+.dashboard .banner:first-child .thirdBox {
+    flex: 1;
+    border-radius: 20px;
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.dashboard .banner:first-child .secondBox p,
+.dashboard .banner:first-child .thirdBox p {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.dashboard .banner:first-child .secondBox span,
+.dashboard .banner:first-child .thirdBox span {
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.dashboard .banner:last-child {
+    height: 100vh;
+    /* Đặt chiều cao cố định cho ô màu trắng */
+    border-radius: 20px;
+    padding: 20px;
+    flex: 1;
+    border: 2px solid var(--darkblue); 
+    background-color: #fff;
+    overflow-y: auto;
+    /* Chỉ cho phép cuộn dọc */
+    overflow-x: hidden;
+    /* Ẩn cuộn ngang nếu có */
+}
+
+.dashboard .banner:last-child h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin: 15px;
+    color: var(--darkblue);
+    text-align: center;
+}
+
+.banner .table-container {
+    height: 350px;
+    /* Đặt chiều cao cố định như mẫu */
+    overflow-y: auto;
+    /* Kích hoạt cuộn dọc */
+    width: 100%;
+    border-radius: 8px;
+    background-color: white;
+    /* Màu nền trắng cho bảng */
+
+    /* Tùy chỉnh thanh cuộn trên Firefox */
+    scrollbar-width: thin;
+    /* Độ rộng mỏng */
+    scrollbar-color: var(--blue) #f1f1f1;
+    /* Màu thanh cuộn (nút và nền) */
+}
+
+/* Tùy chỉnh thanh cuộn trên Webkit (Chrome, Edge, Safari) */
+.banner .table-container::-webkit-scrollbar {
+    width: 3px;
+    /* Độ rộng thanh cuộn */
+}
+
+.banner .table-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Nền của thanh cuộn */
+    border-radius: 10px;
+    /* Bo góc */
+}
+
+.banner .table-container::-webkit-scrollbar-thumb {
+    background-color: var(--blue);    /* Màu nút kéo */
+    border-radius: 10px;
+    /* Bo góc */
+    border: 2px solid #f1f1f1;
+    /* Tạo khoảng cách với track */
+}
+
+.banner .table-container::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue);
+    /* Màu nút khi hover */
+}
+
+.dashboard .banner table {
+    width: 100%;
+    color: var(--blue);
+    font-size: 16px;
+    max-height: calc(100vh);
+    /* Giới hạn chiều cao của bảng trong banner */
+}
+
+.dashboard .banner table select {
+    font-size: 16px;
+    border: none;
+    width: 100%;
+    font-weight: 600;
+}
+
+.dashboard table td svg {
+    display: flex;
+    margin: 0 auto;
+}
+
+.dashboard table td .green {
+    font-size: 16px;
+    color: #16a34a;
+}
+
+.dashboard table td .red {
+    font-size: 16px;
+    color: #dc2626;
+}
+
+.dashboard .banner table select:focus {
+    outline: none;
+}
+
+.dashboard .banner table .value-pending {
+    color: #eab308;
+}
+
+.dashboard .banner table .value-accepted {
+    color: #16a34a;
+}
+
+.dashboard .banner table .value-rejected {
+    color: #dc2626;
+}
+
+.dashboard .banner table thead {
+    text-align: justify;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+}
+
+.dashboard .banner table thead th {
+    padding: 12px 0;
+    background-color: var(--darkblue);
+    color: #fff;
+    text-align: center;
+    border-bottom: #adcbe3;
+}
+
+.dashboard .banner table tbody td {
+    padding: 12px 0;
+    text-align: center;
+    border-bottom: 1px solid #adcbe3;
+}
+
+.add-appointment {
+    text-align: right;
+    /* Aligns the button to the right */
+}
+
+.btn-add-appointment {
+    background-color: var(--darkblue);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.btn-appointment:hover {
+    background-color: var(--blue);
+}
+
+
+.plus-icon {
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.filter-section {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+  }
+  
+  .filter-input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 2px solid var(--blue);
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    color: var(--darkblue);
+  }
+  
+  .filter-input:focus {
+    border-color: var(--blue);
+    outline: none;
+  }
+  
+  .filter-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: var(--darkblue);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .filter-button:hover {
+    background-color: var(--blue);
+    transform: scale(1.05);
+  }
+  
+  .filter-button:active {
+    transform: scale(1);
+  }
+  
+  .modal-overlay {
+    display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1000;
+      overflow: hidden; /* Đảm bảo không cuộn nền phía sau */
+  }
+  
+  .modal-content {
+      height: auto;
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 20px 40px;
+      width: 600px;
+      max-width: 90%;
+      border: 3px solid #274c77;
+      flex-direction: column;
+      display: flex;
+      position: relative;
+      margin: auto;
+      max-height: 100vh;
+      /* Giới hạn chiều cao của modal */
+      overflow-y: auto; /* Bật cuộn dọc nếu nội dung vượt quá chiều cao */
+  
+      position: relative;
+      overflow: visible;
+  
+      /* Tùy chỉnh thanh cuộn trên Firefox */
+      scrollbar-width: thin;
+      /* Độ rộng mỏng */
+      scrollbar-color: #274c77 #f1f1f1;
+      /* Màu thanh cuộn (nút và nền) */
+  }
+  
+  .modal-content select {
+      z-index: 1000;
+      position: relative;
+  }
+  
+  /* Tùy chỉnh thanh cuộn */
+  .modal-content::-webkit-scrollbar {
+      width: 8px;
+      /* Độ rộng của thanh cuộn */
+  }
+  
+  
+  .modal-content::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      /* Màu nền của đường đi thanh cuộn */
+      border-radius: 4px;
+      /* Bo góc cho đường đi */
+  }
+  
+  
+  .modal-content::-webkit-scrollbar-thumb {
+      background-color: #c1c1c1;
+      /* Màu của thanh cuộn */
+      border-radius: 4px;
+      /* Bo góc cho thanh cuộn */
+      border: 2px solid #f1f1f1;
+      /* Khoảng cách giữa thanh cuộn và đường đi */
+  }
+  
+  
+  .modal-content::-webkit-scrollbar-thumb:hover {
+      background-color: #a8a8a8;
+      /* Màu của thanh cuộn khi hover */
+  }
+  
+  .modal-title {
+      text-align: center;
+      font-size: 30px;
+      color: #274c77;
+      margin-top: 15px;
+      margin-bottom: 10px !important;
+  }
+  
+  .label-text {
+      display: block;
+      text-align: left;
+      font-weight: bold;
+      color: #274c77;
+      margin-bottom: 10px !important;
+  }
+  
+  .modal-input {
+      width: 100%;
+      /* Đảm bảo cả input và select đều chiếm toàn bộ chiều rộng */
+      padding: 10px;
+      margin-bottom: 15px !important;
+      border: 2px solid #274c77;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-family: 'Lato';
+      color: #274c77;
+      box-sizing: border-box;
+      /* Đảm bảo padding không ảnh hưởng đến chiều rộng */
+  }
+  
+  
+  .modal-submit-button {
+      background-color: #274c77;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+  }
+  
+  .modal-submit-button:hover {
+      background-color: #5790ab;
+  }
+  
+  .close-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      font-size: 2rem;
+      color: #b3b3b3;
+      background: none;
+      border: none;
+  }
+  
+  .close-icon:hover {
+      color :#274c77;
+  }

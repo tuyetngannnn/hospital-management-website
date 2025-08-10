@@ -1,0 +1,120 @@
+.special-offer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0 60px 0;
+}
+
+.special-offer__content {
+  width: 1340px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.special-offer__text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  gap: 20px;
+}
+
+.special-offer__title {
+  font-size: 40px;
+}
+
+.special-offer__button {
+  width: 412px;
+  height: 78px;
+  background-color: var(--blue); /* Màu nền cho nút, thay đổi nếu cần */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 32px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  &:hover {
+    background-color: #e2ebef;
+    color: var(--blue);
+  }
+}
+.calendar-booking {
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  margin-left: 8px;
+}
+.special-offer__button:hover .calendar-booking {
+  content: url("../../assets/calendar_booking_hover.png"); /* Đổi đường dẫn đến icon mới */
+}
+/* Responsive */
+@media (max-width: 1024px) {
+  .special-offer__content {
+    width: 100%; /* Làm cho content chiếm toàn bộ chiều rộng */
+    height: 300px; /* Giảm chiều cao để phù hợp với màn hình nhỏ */
+  }
+
+  .special-offer__title {
+    font-size: 32px; /* Giảm kích thước font cho tiêu đề */
+  }
+
+  .special-offer__button {
+    width: 80%; /* Nút sẽ chiếm 80% chiều rộng */
+    font-size: 24px; /* Giảm kích thước font của nút */
+    height: 60px; /* Giảm chiều cao của nút */
+  }
+
+  .calendar-booking {
+    width: 28px; /* Giảm kích thước của icon */
+    height: 28px; /* Giảm kích thước của icon */
+    margin-left: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .special-offer__title {
+    font-size: 24px; /* Giảm kích thước font cho tiêu đề */
+  }
+  .special-offer__text {
+    padding: 0;
+  }
+
+  .special-offer__button {
+    width: 90%; /* Nút sẽ chiếm 90% chiều rộng */
+    font-size: 20px; /* Giảm kích thước font của nút */
+    height: 50px; /* Giảm chiều cao của nút */
+  }
+
+  .calendar-booking {
+    width: 24px; /* Giảm kích thước của icon */
+    height: 24px; /* Giảm kích thước của icon */
+    margin-left: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .special-offer__content {
+    height: 250px; /* Giảm chiều cao cho phù hợp với màn hình nhỏ */
+  }
+
+  .special-offer__title {
+    font-size: 20px; /* Giảm kích thước font cho tiêu đề */
+  }
+
+  .special-offer__button {
+    width: 95%; /* Nút chiếm 95% chiều rộng */
+    font-size: 18px; /* Giảm kích thước font của nút */
+    height: 45px; /* Giảm chiều cao của nút */
+  }
+
+  .calendar-booking {
+    width: 20px; /* Giảm kích thước của icon */
+    height: 20px; /* Giảm kích thước của icon */
+    margin-left: 4px;
+  }
+}

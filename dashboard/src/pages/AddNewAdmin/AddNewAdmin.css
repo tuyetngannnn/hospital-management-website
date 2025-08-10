@@ -1,0 +1,181 @@
+@import '../../App.css';
+
+/* Đặt bố cục 2 cột với flexbox */
+.admin-layout {
+    display: flex;
+    height: calc(100vh - 40px);
+    /* Chiều cao 100% màn hình */
+    flex-direction: column;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.admin-manager-content {
+    /* flex-grow: 1;
+  padding: 20px;
+  border: solid 1.5px #EFD099;
+  background-color: #f5f8fc;
+  border-radius: 20px;
+  margin-left: 250px;
+  overflow-y: auto;
+  display: flex; */
+
+    margin-left: 250px;
+    height: 100vh;
+    /* Đặt chiều cao cố định cho ô màu trắng */
+    border-radius: 20px;
+    padding: 20px;
+    flex: 1;
+    border: 2px solid var(--darkblue);
+    background-color: #fff;
+    overflow-y: auto;
+    /* Chỉ cho phép cuộn dọc */
+    overflow-x: hidden;
+    /* Ẩn cuộn ngang nếu có */
+
+    display: flex;
+    justify-content: center;
+    /* Căn giữa nội dung theo chiều ngang */
+    align-items: center;
+    /* Căn giữa nội dung theo chiều dọc */
+
+    /* Tùy chỉnh thanh cuộn trên Firefox */
+    scrollbar-width: thin;
+    /* Độ rộng mỏng */
+    scrollbar-color: var(--darkblue) #f1f1f1;
+    /* Màu thanh cuộn (nút và nền) */
+}
+
+/* Tùy chỉnh thanh cuộn trên Webkit (Chrome, Edge, Safari) */
+.home-manager-content::-webkit-scrollbar {
+    width: 4px;
+    /* Độ rộng thanh cuộn */
+}
+
+.home-manager-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Nền của thanh cuộn */
+    border-radius: 4px;
+    /* Bo góc */
+}
+
+.home-manager-content::-webkit-scrollbar-thumb {
+    background-color: var(--darkblue);
+    /* Màu nút kéo */
+    border-radius: 4px;
+    /* Bo góc */
+    border: 2px solid #f1f1f1;
+    /* Tạo khoảng cách với track */
+}
+
+.home-manager-content::-webkit-scrollbar-thumb:hover {
+    background-color: var(--darkblue);
+    /* Màu nút khi hover */
+}
+
+
+.add-new-admin-form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-new-admin-title {
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin: 20px 0 30px 0;
+    color: var(--darkblue);
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--darkblue);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid var(--darkblue);
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Lato';
+    color: var(--darkblue);
+    height: 50px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.form-row .form-group {
+    flex: 1;
+    /* Mỗi nhóm chiếm không gian đều nhau */
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    /* Đảm bảo input/textarea không bị tràn */
+    box-sizing: border-box;
+    /* Đảm bảo padding không ảnh hưởng kích thước */
+}
+
+.btn-add-new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-button {
+    padding: 10px 15px;
+    background-color: var(--darkblue);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    width: 250px;
+    height: 50px;
+}
+
+.form-button:hover {
+    background-color: var(--blue);
+}
+
+input:focus,
+select:focus {
+    border-color: var(--blue);
+}
+
+
+/* Label */
+.label-text {
+    font-size: 15px;
+    color: var(--darkblue);
+    margin-bottom: 5px;
+    display: block;
+}
+
+.required::after {
+    content: " *";
+    color: red;
+}

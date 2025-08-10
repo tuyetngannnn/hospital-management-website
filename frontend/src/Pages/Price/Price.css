@@ -1,0 +1,159 @@
+@import "../../App.css";
+.service-list {
+  max-width: 1200px;
+  text-align: center;
+  justify-self: center;
+}
+.price-service-tittle {
+  color: var(--blue);
+  text-transform: uppercase;
+  padding: 30px 0;
+  text-align: center;
+}
+.service-review {
+  color: var(--blue);
+  padding-bottom: 30px;
+}
+.filter-container {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.filter-container select {
+  width: 50%;
+  color: #2a2f38;
+  font-size: 16px;
+}
+/* Container tổng */
+.service-container {
+  margin: 20px auto;
+}
+/* Tiêu đề nhóm dịch vụ */
+.service-type-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 cột: Dịch vụ và Giá */
+  background-color: var(--blue);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.service-type-header h2 {
+  color: white;
+}
+.grid-header {
+  margin: 0;
+  padding: 0;
+  grid-column: 1 / span 2;
+  text-align: center;
+  text-transform: uppercase;
+  height: 56px;
+  align-content: center;
+  background-color: #9ec1d1;
+  color: white;
+  font-size: 24px;
+}
+
+/* Grid container */
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 cột: Dịch vụ và Giá */
+  grid-column: 1 / span 2; /* Gộp cả hai cột */
+}
+
+/* Dòng dữ liệu */
+.grid-row {
+  display: contents; /* Đảm bảo mỗi dòng giữ layout của grid */
+  color: var(--blue);
+}
+
+.grid-row .grid-item-price {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.service-card {
+  display: flex;
+  justify-content: space-between;
+}
+/* Responsive CSS */
+@media (max-width: 1024px) {
+  .service-list {
+    max-width: 100%;
+  }
+
+  .filter-container select {
+    width: 80%; /* Mở rộng chiều rộng của select */
+    font-size: 14px; /* Giảm kích thước font */
+  }
+
+  .service-type-header {
+    grid-template-columns: 1fr; /* Chuyển thành 1 cột khi màn hình nhỏ */
+  }
+
+  .grid-header {
+    font-size: 18px; /* Giảm kích thước font */
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr; /* Chuyển thành 1 cột khi màn hình nhỏ */
+  }
+
+  .grid-row {
+    flex-direction: column; /* Dữ liệu dịch vụ và giá sẽ hiển thị theo cột */
+    text-align: center; /* Canh giữa */
+  }
+
+  .grid-item-price {
+    margin-top: 10px; /* Cách nhau giữa dịch vụ và giá */
+  }
+}
+
+@media (max-width: 768px) {
+  .service-container {
+    margin: 10px auto;
+    padding: 10px; /* Thêm padding vào container */
+  }
+
+  .price-service-tittle {
+    font-size: 18px; /* Giảm kích thước tiêu đề */
+  }
+
+  .service-type-header {
+    padding: 8px;
+    grid-template-columns: 1fr; /* Chuyển thành 1 cột khi màn hình rất nhỏ */
+  }
+
+  .grid-header {
+    font-size: 16px; /* Giảm kích thước font */
+  }
+
+  .grid-item-price {
+    font-size: 14px; /* Giảm font size của giá */
+  }
+
+  .service-card {
+    flex-direction: column; /* Hiển thị các phần của service-card theo chiều dọc */
+    align-items: center; /* Căn giữa */
+  }
+}
+
+@media (max-width: 480px) {
+  .service-type-header h2 {
+    font-size: 14px; /* Giảm kích thước font cho tiêu đề */
+  }
+
+  .grid-header {
+    font-size: 14px; /* Giảm kích thước font */
+  }
+
+  .grid-item-price {
+    font-size: 12px; /* Giảm kích thước font cho giá */
+  }
+
+  .price-service-tittle {
+    font-size: 16px; /* Giảm kích thước font cho tiêu đề */
+  }
+}

@@ -1,0 +1,125 @@
+.followup{
+    margin-left: 265px;
+}
+
+  .nd-followup {
+    margin: 24px 15px 24px 24px;
+    padding: 20px;
+    border: 2px solid var(--blue); 
+    border-radius: 8px;
+    background-color: #f9f9f9; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    height: 638px; 
+    overflow-y: auto;
+    overflow-x: hidden; 
+}
+
+/* Tùy chỉnh giao diện thanh trượt */
+.nd-followup::-webkit-scrollbar {
+    width: 8px; 
+}
+
+.nd-followup::-webkit-scrollbar-thumb {
+  height: 10px;
+    background-color: #ccc; 
+    border-radius: 8px; 
+}
+
+.nd-followup::-webkit-scrollbar-thumb:hover {
+    background-color: #0056b3; 
+}
+
+.nd-followup::-webkit-scrollbar-track {
+    background-color: #f1f1f1; 
+}
+
+  .nd-followup h2 {
+    font-size: 30px;
+    text-align: center;
+    color: #4a7c94;
+    font-weight: bold;
+  }
+  
+  .nd-followup table {
+    justify-self: center;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+  }
+  
+  .nd-followup table thead th {
+    font-size: 20px;
+    /* background-color: var(--blue); */
+    color: var(--darkblue);
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid var(--darkblue);
+  }
+  
+  .nd-followup table tbody tr {
+    border-bottom: 1px solid #e3e3e3;
+  }
+  
+  /* .nd_doctor table tbody tr:last-child {
+    border-bottom: none;
+  } */
+  
+  .nd-followup table td {
+    font-size: 18px;
+    padding: 13px;
+    vertical-align: middle;
+  }
+  .nd-followup table th,
+  table td {
+    text-align: center;
+  }
+  
+.mhd{
+    width: 150px;
+    height: 40px;
+}
+.tbn-1{
+  width: 170px;
+  height: 40px;
+}
+.ndk{
+  width: 150px;
+  height: 40px;
+}
+.ndk{
+  width: 150px;
+  height: 40px;
+}
+.ntk{
+  width: 150px;
+  height: 40px;
+}
+.tt-1{
+    width: 150px;
+    height: 40px;
+  }
+
+/* CSS cho nút */
+.btn-see-detail,
+.create-detail {
+  display: block; 
+  width: 150px; 
+  padding: 10px 15px; 
+  margin: 10px 0; 
+  font-size: 16px; 
+  color: var(--darkblue); 
+  background-color: white; 
+  border: 1px solid var(--blue); 
+  border-radius: 5px; 
+  text-align: center; 
+  cursor: pointer; 
+  transition: all 0.3s ease; 
+}
+
+/* Hiệu ứng hover */
+.btn-see-detail:hover,
+.create-detail:hover {
+  background-color: var(--blue); 
+  color: white; /* Màu chữ khi hover */
+}

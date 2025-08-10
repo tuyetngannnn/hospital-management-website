@@ -1,0 +1,156 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
+#root {
+  --blue: #5790ab;
+  --darkblue: #274c77;
+  --grey: #b3b3b3;
+}
+.lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  margin: 0;
+}
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  margin: 0;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+}
+
+/* .logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+} */
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+/* App.css */
+body{
+  margin: 0;
+  padding:0;
+}
+/* Reset mặc định cho padding và margin */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* Bố cục tổng thể */
+/* .app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+} */
+
+/* Sidebar */
+/* .sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  position: fixed;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.sidebar .links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.sidebar .links svg {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #ecf0f1;
+  transition: color 0.3s ease;
+}
+
+.sidebar .links svg:hover {
+  color: #3498db;
+} */
+
+/* Phần nội dung chính */
+/* .content {
+  margin-left: 250px;
+  padding: 20px;
+  width: calc(100% - 250px);
+  overflow-y: auto;
+  transition: margin-left 0.3s ease, width 0.3s ease;
+} */
+
+/* Toggle khi Sidebar ẩn */
+/* .sidebar.hide {
+  width: 60px;
+}
+
+.content.collapsed {
+  margin-left: 60px;
+  width: calc(100% - 60px);
+} */
+
+/* Hamburger icon */
+/* .hamburger {
+  font-size: 2rem;
+  color: #2c3e50;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+} */

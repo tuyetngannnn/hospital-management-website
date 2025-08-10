@@ -1,0 +1,486 @@
+@import "../../App.css";
+/* Toàn bộ trang */
+.all_profile {
+  background-color: #f9fafb; /* Màu nền nhạt */
+  padding: 20px;
+}
+
+.appointment-history {
+  max-width: 1200px; /* Giới hạn chiều rộng tối đa của bảng */
+  margin: 50px; /* Căn giữa bảng trong trang */
+  margin-top: 0;
+  padding: 20px; /* Thêm khoảng cách giữa bảng và viền ngoài */
+  padding-top: 0;
+  width: 100%; /* Đảm bảo bảng chiếm toàn bộ chiều rộng container */
+}
+
+/* Tiêu đề */
+.appointment-history h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #5790ab; /* Màu chữ tối */
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Bảng lịch sử */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff; /* Nền trắng */
+  border-radius: 8px; /* Bo góc bảng */
+  table-layout: fixed; /* Chia đều độ rộng các cột */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+thead tr {
+  background-color: #f3f4f6; /* Màu nền hàng tiêu đề */
+  color: #374151; /* Màu chữ hàng tiêu đề */
+  width: 100%;
+}
+
+th,
+td {
+  border: none; /* Không hiển thị đường viền */
+  padding: 12px 16px; /* Tăng khoảng cách nội dung */
+  text-align: left; /* Căn lề trái */
+  width: 100%;
+}
+
+th {
+  font-weight: bold;
+  font-size: 16px; /* Cỡ chữ hàng tiêu đề */
+  color: #5790ab; /* Màu chữ tiêu đề đậm hơn */
+  text-transform: uppercase; /* Chữ in hoa tiêu đề */
+}
+
+tbody tr {
+  border-bottom: 1px solid #e5e7eb; /* Đường ngăn cách giữa các hàng */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9fafb; /* Màu nền cho hàng chẵn */
+}
+
+tbody tr:hover {
+  background-color: #e5e7eb; /* Hiệu ứng hover */
+  cursor: pointer;
+}
+
+td {
+  font-size: 14px; /* Cỡ chữ trong các ô */
+  color: #4b5563; /* Màu chữ ô */
+}
+
+/* Cột cuối cùng */
+td:last-child {
+  text-align: center; /* Căn giữa nút thao tác */
+}
+
+button {
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi khi hover */
+}
+
+/* Nút "Xem Chi Tiết" */
+button {
+  background-color: #5790ab; /* Màu xanh */
+  color: #ffffff;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #274c77; /* Xanh đậm hơn khi hover */
+}
+
+/* Modal Overlay */
+.ReactModal__Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Hiệu ứng làm mờ nền */
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+.ReactModal__Content {
+  background-color: #ffffff;
+  border-radius: 15px;
+  max-width: 800px; /* Điều chỉnh kích thước cho vừa phải */
+  width: 90%; /* Chiếm tối đa 90% chiều rộng */
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1); /* Đổ bóng mờ */
+  animation: fadeIn 0.3s ease-in-out; /* Hiệu ứng mở */
+}
+
+/* Hiệu ứng Fade-in cho Modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Định dạng tiêu đề */
+.ReactModal__Content h3 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #5790ab;
+  margin-bottom: 15px;
+  text-align: center;
+  margin: 15px;
+}
+
+.ReactModal__Content h4 {
+  font-size: 17px;
+  font-weight: bold;
+  color: #5790ab;
+  margin-bottom: 15px;
+}
+
+/* Định dạng các phần thông tin */
+.ReactModal__Content p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #5790ab;
+  margin: 15px auto;
+}
+
+/* Phần danh sách dịch vụ */
+.ReactModal__Content ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #5790ab;
+}
+
+.ReactModal__Content ul li {
+  margin-bottom: 10px;
+}
+
+/* Nút Đóng */
+.ReactModal__Content button {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ReactModal__Content button:hover {
+  background-color: #d32f2f;
+}
+.list-apointment {
+  display: flex;
+  padding: 50px 20px;
+  justify-content: space-between;
+}
+.list-appointment-detail {
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.list-appointment-detail h1 {
+  text-align: center;
+  color: #5790ab;
+  margin-bottom: 40px;
+  font-size: 35px;
+}
+
+.list-appointment-detail table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.list-appointment-detail th {
+  background-color: #f2f2f2;
+  color: var(--blue);
+  text-align: left;
+  padding: 10px;
+  border-bottom: 2px solid #ddd;
+  font-size: 18px;
+}
+
+.list-appointment-detail td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.list-appointment-detail tr {
+  background-color: #fff;
+  transition: background-color 0.3s;
+}
+
+.list-appointment-detail tr:hover {
+  background-color: #f5f5f5;
+}
+
+.list-appointment-detail button {
+  padding: 6px 12px;
+  background-color: #5790ab;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.list-appointment-detail button:hover {
+  background-color: #274c77;
+}
+
+.list-appointment-detail .no-data {
+  text-align: center;
+  color: #5790ab;
+  font-size: 18px;
+}
+/* AppointmentHistory.css */
+
+/* Toàn bộ trang */
+.all_profile {
+  background-color: #f9fafb; /* Màu nền nhạt */
+  padding: 20px;
+}
+
+.appointment-history {
+  max-width: 1200px; /* Giới hạn chiều rộng tối đa của bảng */
+  margin: 50px; /* Căn giữa bảng trong trang */
+  margin-top: 0;
+  padding: 20px; /* Thêm khoảng cách giữa bảng và viền ngoài */
+  padding-top: 0;
+  width: 100%; /* Đảm bảo bảng chiếm toàn bộ chiều rộng container */
+}
+
+/* Tiêu đề */
+.appointment-history h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #5790ab; /* Màu chữ tối */
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Bảng lịch sử */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff; /* Nền trắng */
+  border-radius: 8px; /* Bo góc bảng */
+  table-layout: fixed; /* Chia đều độ rộng các cột */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+thead tr {
+  background-color: #f3f4f6; /* Màu nền hàng tiêu đề */
+  color: #374151; /* Màu chữ hàng tiêu đề */
+  width: 100%;
+}
+
+th,
+td {
+  border: none; /* Không hiển thị đường viền */
+  padding: 12px 16px; /* Tăng khoảng cách nội dung */
+  text-align: left; /* Căn lề trái */
+  width: 100%;
+}
+
+th {
+  font-weight: bold;
+  font-size: 16px; /* Cỡ chữ hàng tiêu đề */
+  color: #5790ab; /* Màu chữ tiêu đề đậm hơn */
+  text-transform: uppercase; /* Chữ in hoa tiêu đề */
+}
+
+tbody tr {
+  border-bottom: 1px solid #e5e7eb; /* Đường ngăn cách giữa các hàng */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9fafb; /* Màu nền cho hàng chẵn */
+}
+
+tbody tr:hover {
+  background-color: #e5e7eb; /* Hiệu ứng hover */
+  cursor: pointer;
+}
+
+td {
+  font-size: 14px; /* Cỡ chữ trong các ô */
+  color: #4b5563; /* Màu chữ ô */
+}
+
+/* Cột cuối cùng */
+td:last-child {
+  text-align: center; /* Căn giữa nút thao tác */
+}
+
+button {
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi khi hover */
+}
+
+/* Nút "Xem Chi Tiết" */
+button {
+  background-color: #5790ab; /* Màu xanh */
+  color: #ffffff;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #274c77; /* Xanh đậm hơn khi hover */
+}
+
+/* Modal Overlay */
+.ReactModal__Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Hiệu ứng làm mờ nền */
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+.ReactModal__Content {
+  background-color: #ffffff;
+  border-radius: 15px;
+  max-width: 800px; /* Điều chỉnh kích thước cho vừa phải */
+  width: 90%; /* Chiếm tối đa 90% chiều rộng */
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1); /* Đổ bóng mờ */
+  animation: fadeIn 0.3s ease-in-out; /* Hiệu ứng mở */
+}
+
+/* Hiệu ứng Fade-in cho Modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Định dạng tiêu đề */
+.ReactModal__Content h3 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #5790ab;
+  margin-bottom: 15px;
+  text-align: center;
+  margin: 15px;
+}
+
+.ReactModal__Content h4 {
+  font-size: 17px;
+  font-weight: bold;
+  color: #5790ab;
+  margin-bottom: 15px;
+}
+
+/* Định dạng các phần thông tin */
+.ReactModal__Content p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #5790ab;
+  margin: 15px auto;
+}
+
+/* Phần danh sách dịch vụ */
+.ReactModal__Content ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #5790ab;
+}
+
+.ReactModal__Content ul li {
+  margin-bottom: 10px;
+}
+
+/* Nút Đóng */
+.ReactModal__Content button {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ReactModal__Content button:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsive: Đảm bảo modal đẹp trên thiết bị di động */
+@media (max-width: 768px) {
+  .ReactModal__Content {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .ReactModal__Content h3 {
+    font-size: 20px;
+  }
+
+  .ReactModal__Content p {
+    font-size: 14px;
+  }
+
+  .ReactModal__Content button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+
+/* Responsive: Đảm bảo modal đẹp trên thiết bị di động */
+@media (max-width: 768px) {
+  .ReactModal__Content {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .ReactModal__Content h3 {
+    font-size: 20px;
+  }
+
+  .ReactModal__Content p {
+    font-size: 14px;
+  }
+
+  .ReactModal__Content button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}

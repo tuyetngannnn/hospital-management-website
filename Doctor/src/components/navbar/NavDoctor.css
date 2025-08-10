@@ -1,0 +1,71 @@
+.navbar-doctor {
+    font-family: 'Lato';
+    background: var(--blue);
+    margin: 24px;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    max-width: 250px;
+    height: 245px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    line-height: 2;
+}
+
+.menu-icon-doctor{
+    font-family: 'Lato';
+    cursor: pointer;
+    font-size: 24px;
+    color: #004168;
+    margin-bottom: 10px;
+    display: none; 
+}
+
+
+.navbar-doctor ul {
+    font-family: 'Lato';
+
+    display: flex; 
+    list-style-type: none;
+    padding: 0;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.navbar-doctor li {
+    text-align: start;
+    width: 100%;
+}
+
+.navbar-doctor a {
+    font-family: 'Lato';
+    text-decoration: none;
+    color: #EBEBEB;
+    font-size: 20px;
+    width: 100%;
+    padding: 8px 0;
+    position: relative;
+    display: inline; 
+
+}
+
+.navbar-doctor a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; 
+    width: 100%;
+    height: 2px;
+    background-color: white; 
+}
+
+.navbar-doctor a.active {
+    font-weight: bold;
+    color: white; /* Changes the active link color to black */
+}
+.navbar-doctor a:hover {
+    color: white;
+}

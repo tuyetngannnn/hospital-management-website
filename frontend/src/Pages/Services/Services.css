@@ -1,0 +1,320 @@
+@import "../../App.css";
+
+.page-title {
+  text-align: center;
+  padding: 30px;
+  color: var(--blue);
+}
+
+.service-cates-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+.service-cate-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px;
+  gap: 10px;
+}
+.service-cates-container {
+  align-items: center; /* Canh giữa theo chiều dọc */
+}
+
+.service-cate-image {
+  width: 267px;
+  border: 2.5px solid var(--blue);
+  border-radius: 16px;
+  align-self: center;
+  overflow: hidden;
+}
+.service-cate-image:hover {
+  border-color: transparent;
+}
+.service-cate-image img {
+  max-width: 200px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+.service-cate-image:hover img {
+  transform: scale(1.1); /* Zoom lên khi hover */
+}
+
+.service-cate-title {
+  color: var(--blue);
+  margin: 15px 0;
+  text-transform: uppercase;
+}
+
+.service-cate-description {
+  width: 75%;
+  align-self: center;
+  text-align: justify;
+  font-size: 16px;
+  color: #2a2f38;
+  margin-bottom: 10px;
+}
+
+.see-more-link {
+  position: relative;
+  margin-right: 13%;
+  color: var(--darkblue);
+  font-size: 16px;
+  text-decoration: none;
+  margin-top: 10px;
+  align-self: flex-end;
+}
+
+.see-more-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid var(--darkblue);
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+.see-more-link:hover:after {
+  transform: scaleX(0.3);
+}
+
+.no-data-message {
+  text-align: center;
+  color: #999;
+  font-size: 1rem;
+}
+.service-cate-detail {
+  margin: 0 auto;
+  padding: 20px;
+  width: 1340px;
+}
+.detail-service-tittle {
+  position: relative;
+  text-align: center;
+  margin: 20px 0;
+  text-transform: uppercase;
+  width: 75%;
+  justify-self: center;
+  color: var(--blue);
+}
+
+.detail-service-tittle::before,
+.detail-service-tittle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 117%;
+  height: 1px;
+  background-color: var(--blue);
+}
+
+.detail-service-tittle::before {
+  left: 0;
+}
+
+.detail-service-tittle::after {
+  right: 0;
+}
+
+.detail-service-tittle span {
+  display: inline-block;
+  background-color: #fff;
+  padding: 20px 5px;
+  position: relative;
+  z-index: 1;
+}
+.detail-service-description {
+  color: var(--blue);
+  text-align: center;
+  font-size: 18px;
+}
+.detail-service-procedure {
+  margin-top: 30px;
+  text-align: center;
+  color: var(--blue);
+}
+.detail-service-procedure h2 {
+  text-transform: uppercase;
+}
+.procedure-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.procedure-container h3 {
+  width: 90%;
+  justify-self: center;
+  margin-top: 10px;
+  text-align: justify;
+  font-size: 18px;
+}
+.image-step {
+  width: 364px;
+  height: 354px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.detail-service-heading {
+  height: 56px;
+  background-color: var(--blue);
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  align-content: center;
+  border-radius: 2px;
+}
+.name-services {
+  color: var(--blue);
+  font-size: 18px;
+  width: 50%;
+  text-align: left; /* Canh trái */
+  padding-right: 20px;
+}
+.price-services {
+  width: 50%;
+  text-align: right;
+}
+.service-table {
+  width: 100%;
+}
+.service-table td {
+  display: flex;
+  justify-content: space-between;
+  color: var(--blue);
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.service-table tr {
+  display: flex;
+  justify-content: space-between;
+}
+.service-table th {
+  color: var(--blue);
+  font-size: 20px;
+  margin: 10px 0;
+}
+@media screen and (max-width: 768px) {
+  .service-cates-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .service-cate-card {
+    padding: 10px;
+  }
+  .service-cate-description {
+    font-size: 14px;
+    width: 90%;
+  }
+
+  .service-cate-image img {
+    max-width: 80%;
+  }
+
+  .see-more-link {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .service-cate-detail {
+    width: 100%;
+    padding: 0;
+  }
+
+  .detail-service-tittle {
+    width: 100%;
+  }
+
+  .procedure-container {
+    grid-template-columns: 1fr; /* 1 cột cho màn hình nhỏ */
+  }
+
+  .image-step {
+    width: 100%;
+    height: auto;
+  }
+
+  .name-services,
+  .price-services {
+    width: 100%;
+    text-align: left;
+  }
+
+  .service-table td {
+    font-size: 16px; /* Giảm kích thước font */
+  }
+
+  .service-table th {
+    font-size: 18px; /* Giảm kích thước font */
+  }
+}
+@media screen and (max-width: 480px) {
+  .service-cates-container {
+    padding: 5px;
+  }
+
+  .service-cate-card {
+    padding: 10px;
+  }
+
+  .service-cate-description {
+    font-size: 12px;
+    width: 80%;
+  }
+
+  .see-more-link {
+    align-self: center;
+  }
+
+  .detail-service-tittle {
+    font-size: 16px;
+    width: 90%;
+  }
+  .detail-service-tittle span {
+    padding: 20px 0;
+    width: 100%;
+  }
+  .detail-service-tittle::before,
+  .detail-service-tittle::after {
+    display: none;
+  }
+  .detail-service-description {
+    font-size: 14px;
+    width: 90%;
+    line-height: 1.5;
+    justify-self: center;
+  }
+  .detail-service-procedure h2 {
+    font-size: 16px;
+  }
+  .procedure-container ul {
+    padding: 10px;
+  }
+  .procedure-container h3 {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .image-step {
+    width: 100%;
+    height: 254px;
+    object-fit: cover;
+  }
+  .service-table {
+    width: 90%;
+    justify-self: center;
+  }
+  .service-table td {
+    font-size: 14px; /* Giảm kích thước font */
+  }
+
+  .service-table th {
+    font-size: 16px; /* Giảm kích thước font */
+  }
+}

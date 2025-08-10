@@ -1,0 +1,157 @@
+.login_doctor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+  .image_doctor {
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    height: 666px;
+    width: 655px;
+    margin-right: 60px;
+  }
+  
+  
+  .image_doctor img {
+    object-fit: cover;
+    border-radius: 20px;
+    height: 666px;
+    width: 655px;
+  }
+  
+  
+  
+  
+  .login_form_doctor {
+    /* padding-left: 20px; */
+    /* width: 520px; */
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+  }
+  
+  
+  .login_form_doctor p {
+    font-size: 18px;
+    color: var(--blue);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  
+  .login_form_doctor h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--blue);
+  }
+  
+  
+  .input_doctor,
+  .password_doctor {
+    width: 500px;
+    height: 60px;
+    font-size: 20px;
+    padding-left: 16px;
+    border: 3px solid var(--blue);
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+    color: var(--darkblue);
+  }
+  
+  
+  /* Áp dụng màu biên khi focus */
+  .input_doctor:focus {
+    border-color: var(--darkblue);
+    /* Màu biên khi focus */
+  }
+  
+  
+  .password-container-doctor {
+    width: 500px;
+    height: 60px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    border: 3px solid var(--blue);
+    padding-left: 16px;
+    padding-right: 5px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+    /* Thêm thuộc tính này */
+  }
+  
+  
+  /* Sử dụng pseudo-class :focus-within để áp dụng hiệu ứng khi ô input bên trong có focus */
+  .password-container-doctor:focus-within {
+    border-color: #007bff;
+  }
+  
+  
+  .password-input-doctor {
+    width: 100%;
+    font-size: 20px;
+    background-color: transparent;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    color: var(--darkblue);
+  }
+  
+  
+  .password-icon-doctor {
+    color: #888888;
+    width: 35px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding-right: 16px;
+  }
+  
+  
+  .password-icon-doctor:hover {
+    color: var(--blue);
+  }
+  
+  
+  .btn_login-doctor {
+    width: 500px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color:var(--blue);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 25px;
+  }
+  
+  
+  .btn_login-doctor:hover {
+    background-color: var(--darkblue);
+    color: white;
+  }
+  
+  
+  
+  
+  
+  
+  .error-message {
+    color: #ff0000 !important;
+    font-size: 12px;
+    margin-bottom: 20px !important;
+    margin-top: 20px !important;
+    text-align: start;
+  }
+  

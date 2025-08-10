@@ -1,0 +1,64 @@
+/* General styles */
+.page {
+  margin: 20px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.messages-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.message-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.message-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message-header h2 {
+  font-size: 22px;
+  margin: 0;
+  color: #333;
+}
+
+.email {
+  font-size: 14px;
+  color: #888;
+}
+
+.message-body {
+  margin-top: 15px;
+}
+
+.message-body p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.no-messages {
+  text-align: center;
+  font-size: 24px;
+  color: #888;
+}

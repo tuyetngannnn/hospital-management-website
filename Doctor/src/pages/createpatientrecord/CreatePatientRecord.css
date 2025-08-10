@@ -1,0 +1,268 @@
+.create_patient{
+    margin-left: 500px;
+}
+.nd_patient {
+    width: 650px;
+    border-radius: 10px;
+    border: 2px solid var(--blue);
+    padding: 20px;
+}
+
+.nd_patient h1 {
+text-align: center;
+font-size: 30px;
+color: var(--blue);
+margin-bottom: 20px;
+}
+
+.muc-detail-patient {
+display: flex;
+flex-direction: column;
+margin-bottom: 15px;
+}
+
+.muc-detail-patient label {
+font-size: 18px;
+color: var(--darkblue);
+margin-bottom: 5px;
+font-weight: 500;
+}
+
+.value-detail-patient {
+font-size: 16px;
+color: var(--darkblue);
+padding: 13px;
+border: 1px solid var(--blue);
+border-radius: 5px;
+background-color: white;
+}
+
+.gop-muc-patient {
+display: flex;
+justify-content: space-between;
+gap: 10px;
+}
+
+.gop-muc-patient .muc-detail-patient {
+flex: 1;
+}
+
+
+
+/* Container chính */
+.form-row-patient {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  /* Phần "Loại dịch vụ" và "Dịch vụ" */
+  .type-service,
+  .service-patient {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  /* Nhỏ gọn cho các lựa chọn dịch vụ */
+  .nho {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .nho label {
+    font-size: 18px;
+    color: var(--darkblue);
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  /* Dropdown dịch vụ */
+  .service-select-patient {
+    height: 51.6px;
+    padding: 8px 10px;
+    border: 1px solid var(--blue);
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    color: var(--darkblue);
+    outline: none;
+  }
+  
+  .service-select-patient.short {
+    height: 51.6px;
+  }
+  
+  /* Nút "-" để xóa */
+  .add-move {
+    margin-top: 30px;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid var(--blue);
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .add-move:hover {
+    background-color: #dce8f6;
+  }
+  
+  /* Phần số lượng */
+  .quanlity {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .quanlity button {
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid var(--blue);
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .quanlity button:hover {
+    color: white;
+    background-color: var(--blue);
+  }
+  
+  .quanlity span {
+    color: var(--darkblue);
+    align-content: center;
+    height: 40px;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid var(--blue);
+    border-radius: 5px;
+    background-color: #fff;
+    min-width: 30px;
+    text-align: center;
+  }
+
+  
+  /* Tổng tiền */
+  /* .price label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-top: 15px;
+  } */
+  
+ /* Container của phần ngày theo dõi */
+.update-patient {
+    margin-top: 15px;
+  }
+  
+  .update-patient label {
+    font-size: 18px;
+    color: var(--darkblue);
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  /* Input kiểu date */
+  .update-patient input[type="date"] {
+    margin-top: 5px;
+    height: 30px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--blue);
+    border-radius: 5px;
+    width: 629px;
+    background-color: white;
+    color: var(--darkblue);
+    /* display: flex;
+    align-items: center; */
+  }
+  
+  /* Icon lịch được hiển thị tự động từ trình duyệt */
+  .update-patient input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #333;
+    cursor: pointer;
+  }
+  
+
+  /* Hiệu ứng focus */
+  /* textarea:focus,
+  input:focus,
+  select:focus {
+    border-color: #7aa2d7;
+    outline: none;
+  } */
+  
+.add-service p {
+    color: var(--darkblue);
+    font-size: 18px;
+}
+.add-service p:hover {
+    color: var(--blue);
+    text-decoration: underline;
+    
+}
+
+/* Container của phần tổng tiền */
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Nhãn (label) "Tổng tiền:" */
+  .price label {
+
+    margin-right: 10px;
+    flex: 0 0 auto; /* Đảm bảo nhãn không chiếm hết không gian */
+    font-size: 25px;
+    color: var(--darkblue);
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  /* Nội dung giá tiền */
+  .nd-price {
+    margin: 15px 0 5px 0;
+    flex: 0 0 auto; /* Đảm bảo nhãn không chiếm hết không gian */
+    font-size: 25px;
+    font-weight: normal;
+    color: var(--darkblue);
+    white-space: nowrap; /* Đảm bảo không xuống dòng */
+    text-align: right;
+    flex: 1;
+  }
+  
+
+
+
+  
+/* Nút "Save Record" */
+.btn-save {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .btn-save button {
+    width: 100%;
+    height: 51.6px;
+    padding: 10px 20px;
+    background-color: var(--blue);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .btn-save button:hover {
+    background-color: var(--darkblue);
+  }

@@ -1,0 +1,164 @@
+@import "../../App.css";
+.patient-record {
+  display: flex;
+  margin: 50px 0;
+}
+.patient-record-detail {
+  max-width: 2400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.bio-dental-care {
+  display: flex;
+  background-color: var(--blue);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px 40px 20px 40px;
+  gap: 30px;
+}
+.bio-dental-care img {
+  width: 100px;
+  height: 100px;
+  border-radius: 16px;
+}
+.bio-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.record-patient-detail h5 {
+  margin-top: 30px;
+  text-align: center;
+  color: var(--blue);
+}
+.record-pateint-detail-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 30px 0;
+  justify-self: center;
+  background-color: #f2f2f2;
+  border-radius: 16px;
+}
+.patient-infor-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 40%;
+}
+.patient-infor-detail li {
+  display: flex;
+  justify-content: space-between;
+}
+.patient-booking {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px 30px;
+}
+.patient-booking li {
+  display: flex;
+  justify-content: space-between;
+}
+.pateint-service-detail table {
+  width: 80%;
+  min-height: 150px;
+  border-collapse: collapse;
+  margin: 30px auto;
+}
+
+.pateint-service-detail th,
+.pateint-service-detail td {
+  text-align: center; /* Căn trái nội dung */
+  padding: 8px; /* Thêm khoảng cách bên trong */
+}
+.quantity-detail {
+  text-align: center;
+}
+.pateint-service-detail th {
+  background-color: var(--blue); /* Màu nền nhẹ cho tiêu đề cột */
+  color: white;
+  text-align: center;
+  border-right: 1px solid #ddd;
+  text-transform: uppercase;
+}
+
+.pateint-service-detail tr:nth-child(even) {
+  background-color: #f9f9f9; /* Màu nền xen kẽ cho hàng */
+}
+
+.pateint-service-detail td {
+  word-wrap: break-word; /* Cho phép nội dung dài tự xuống dòng */
+  border-right: 1px solid #ddd;
+}
+
+.pateint-service-detail p {
+  margin: 0; /* Xóa khoảng cách giữa các đoạn văn */
+}
+.record-total {
+  width: 80%;
+  min-height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto;
+}
+
+.notes {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notes input {
+  width: 100%;
+  min-height: 85px;
+  padding: 10px 15px;
+  border: 1px solid var(--blue); /* Viền mặc định */
+  border-radius: 8px;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  transition: border-color 0.3s, background-color 0.3s; /* Hiệu ứng mượt */
+}
+
+.notes input::placeholder {
+  color: #aaa; /* Màu placeholder mặc định */
+  transition: opacity 0.3s; /* Hiệu ứng mờ dần */
+}
+
+.notes input:focus::placeholder {
+  opacity: 0; /* Làm mất placeholder khi focus */
+}
+
+.notes input:focus {
+  outline: none; /* Loại bỏ viền mặc định */
+  border: none; /* Loại bỏ viền */
+  background-color: #f0f8ff; /* Màu nền nhạt để phân biệt trạng thái focus */
+}
+
+.total-detail {
+  width: 25%;
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: var(--blue);
+  padding: 20px;
+  border-radius: 6px;
+}
+.total-detail h2 {
+  color: white;
+  text-align: center;
+}
+.backHome {
+  width: 90%;
+  min-height: 50px;
+  color: var(--blue);
+  font-size: 18px;
+  font-weight: 600;
+  text-align: right;
+  margin-top: -80px 0;
+}

@@ -1,0 +1,243 @@
+.create-folow{
+    margin-left: 500px;
+}
+
+.nd-create-folow{
+    width: 650px;
+    border-radius: 10px;
+    border: 2px solid var(--blue);
+    padding: 20px;
+}
+
+.nd-create-folow h1 {
+text-align: center;
+font-size: 30px;
+color: var(--blue);
+margin-bottom: 20px;
+}
+
+.muc-detail-create-folow {
+display: flex;
+flex-direction: column;
+margin-bottom: 15px;
+}
+
+.muc-detail-create-folow label {
+font-size: 18px;
+color: var(--darkblue);
+margin-bottom: 5px;
+font-weight: 500;
+}
+
+.value-detail-create-folow {
+font-size: 16px;
+color: var(--darkblue);
+padding: 13px;
+border: 1px solid var(--blue);
+border-radius: 5px;
+background-color: white;
+}
+
+
+/* Container chính */
+.form-row-create {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  /* Phần "Loại dịch vụ" và "Dịch vụ" */
+  .type-service-create,
+  .dina {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  /* Nhỏ gọn cho các lựa chọn dịch vụ */
+  .hahahahahi {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .hahahahahi label {
+    font-size: 18px;
+    color: var(--darkblue);
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  /* Dropdown loai dịch vụ */
+  .service-select-create {
+    /* color: var(--darkblue); */
+    height: 51.6px;
+    padding: 8px 10px;
+    border: 1px solid var(--blue);
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    color: var(--darkblue);
+    outline: none;
+  }
+  
+  .service-select-create.short {
+    height: 51.6px;
+  }
+  
+  /* Nút "-" để xóa */
+  .add-move-create {
+    margin-top: 50px;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid var(--blue);
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .add-move-create:hover {
+    background-color: var(--blue);
+    color: white;
+  }
+  
+
+
+  /* Phần số lượng */
+  .soluong {
+    margin-top: 47px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .soluong button {
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid var(--blue);
+    color: var(--drakblue);
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .soluong button:hover {
+    color: white;
+    background-color: var(--blue);
+  }
+  
+  .soluong span {
+    color: var(--darkblue);
+    align-content: center;
+    height: 40px;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid var(--blue);
+    border-radius: 5px;
+    background-color: #fff;
+    min-width: 30px;
+    text-align: center;
+  }
+
+  
+ /*  lich kham */
+.lichtaikham{
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  
+  .lichtaikham label {
+    font-size: 18px;
+    color: var(--darkblue);
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .lichtaikham input[type="date"] {
+    margin-top: 5px;
+    height: 30px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--blue);
+    border-radius: 5px;
+    width: 629px;
+    background-color: white;
+    color: var(--darkblue);
+    /* display: flex;
+    align-items: center; */
+  }
+  
+  .lichtaikham input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #333;
+    cursor: pointer;
+  }
+  
+
+/* them moi */
+.add-service-create p {
+    color: var(--darkblue);
+    font-size: 18px;
+}
+.add-service-create p:hover {
+    color: var(--blue);
+    text-decoration: underline;
+    
+}
+
+/* tong tien */
+.price-create {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .price-create label {
+    margin-right: 10px;
+    flex: 0 0 auto; /* Đảm bảo nhãn không chiếm hết không gian */
+    font-size: 25px;
+    color: var(--darkblue);
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .gia-tao {
+    margin: 15px 0 5px 0;
+    flex: 0 0 auto; /* Đảm bảo nhãn không chiếm hết không gian */
+    font-size: 25px;
+    font-weight: normal;
+    color: var(--darkblue);
+    white-space: nowrap; /* Đảm bảo không xuống dòng */
+    text-align: right;
+    flex: 1;
+  }
+  
+
+
+
+  
+/* Nút "Save Record" */
+.btn-save {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .btn-save button {
+    width: 100%;
+    height: 51.6px;
+    padding: 10px 20px;
+    background-color: var(--blue);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .btn-save button:hover {
+    background-color: var(--darkblue);
+  }

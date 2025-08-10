@@ -1,0 +1,139 @@
+.detail_doctor {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh; */
+    margin-left: 560px;
+}
+
+/* .detail_doctor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    padding: 20px;
+} */
+
+.nd_detail {
+        width: 650px;
+        border-radius: 10px;
+        border: 2px solid var(--blue);
+        padding: 20px;
+}
+
+.nd_detail h1 {
+    text-align: center;
+    font-size: 30px;
+    color: var(--blue);
+    margin-bottom: 20px;
+}
+
+.muc-detail-bs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.muc-detail-bs label {
+    font-size: 18px;
+    color: var(--darkblue);
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.value-detail-bs {
+    font-size: 16px;
+    color: var(--darkblue);
+    padding: 13px;
+    border: 1px solid var(--blue);
+    border-radius: 5px;
+    background-color: white;
+}
+
+.gop-muc {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.gop-muc .muc-detail-bs {
+    flex: 1;
+}
+.value-detail-bs-service{
+    font-size: 15px;
+    color: var(--darkblue);
+    padding: 0 0 0 13px;
+    border: 1px solid var(--blue);
+    border-radius: 5px;
+    background-color: white;
+}
+
+.value-detail-bs-service ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.value-detail-bs-service ul li {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+
+/* .hahahaha .btn-xn-huy {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 16px;
+    width: 50%;
+    height: 51px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+} */
+
+.hahahaha {
+   display: flex;
+  justify-content: space-between; 
+  gap: 16px; 
+  }
+  
+  .btn-xn-huy {
+    flex: 1; 
+  text-align: center; 
+  height: 51px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  }
+  
+
+ .btn-xn-huy:first-child {
+    background-color: red;
+    color: #fff;
+}
+
+ .btn-xn-huy:last-child {
+    background-color: var(--blue);
+    color: white;
+}
+.btn-xn-huy:first-child:hover {
+    background-color: #f57561;
+    color: #fff;
+}
+
+ .btn-xn-huy:last-child:hover {
+    background-color: var(--darkblue);
+    color: white;
+}
+
